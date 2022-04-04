@@ -6,13 +6,21 @@
   background-size: 100%;
   text-align: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/main-mobile-background@2x.png);
+  }
+
   @media (min-width: @tablet-width) {
     height: 810px;
     background-image: url(../img/main-tablet-background.png);
     background-repeat: no-repeat;
-    background-position: 50% 270px;
-    background-size: 80%;
+    background-position: 50% 250px;
+    background-size: 709px 609px;
     text-align: left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/main-tablet-background@2x.png);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -23,21 +31,12 @@
 }
 
 .main-offer__wrapper {
-  width: 320px;
   text-align: center;
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 709px;
-    margin: 0 auto;
-    padding-left: 87px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    margin: 0 auto;
+    padding-left: 86px;
   }
 }
 
@@ -52,10 +51,14 @@
     font-size: 60px;
     line-height: 60px;
     color: inherit;
-    margin: 62px 0 0 0;
     padding: 0;
+    margin: 62px 0 0 0;
     text-align: left;
-    width: 415px;
+    min-width: 415px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 414px;
   }
 }
 
@@ -88,7 +91,7 @@
   text-transform: uppercase;
   color: @basic-white;
   background-color: @electric-green;
-  padding: 10px 74px;
+  padding: 8px 92px;
   text-align: center;
   border: none;
 

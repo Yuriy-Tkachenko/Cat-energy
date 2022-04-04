@@ -132,21 +132,38 @@
 
 .option-product__card {
   height: 289px;
-  background-image: url(../img/gift-photo-mobile-1.png);
+  background-image: url(../img/gift-photo-mobile.png);
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0 0 35px 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/gift-photo-mobile@2x.png);
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     height: 200px;
     background-image: url(../img/gift-photo-tablet.png);
     background-position: center;
     background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/gift-photo-tablet@2x.png);
+      background-size: cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 288px;
     width: 245px;
     background-image: url(../img/gift-photo-desktop.png);
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/gift-photo-desktop@2x.png);
+      background-size: cover;
+    }
   }
 }
 

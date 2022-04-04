@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Cat energy</title>
   </head>
   <body class="page__body page-body__main-screen">
@@ -31,7 +35,7 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="main-offer container">
+      <section class="main-offer">
         <div class="main-offer__wrapper container">
           <h1 class="page-main__title page-main__title--color-transform">Функциональное питание для котов</h1>
           <p class="main-offer__slogan">Занялся собой? Займись котом!</p>
@@ -40,7 +44,7 @@
       </section>
       <section class="features">
         <h2 class="visually-hidden">Программы функционального питания</h2>
-        <div class="features-wrapper container">
+        <div class="container">
           <ul class="features__list">
             <li class="features__item">
               <div class="feature__item-container">
@@ -67,8 +71,8 @@
           </ul>
         </div>
       </section>
-      <section class="product-info container">
-        <div class="product-info__wrapper container">
+      <section class="product-info">
+        <div class="container">
           <h2 class="product-info__title page-main__title">Как это работает</h2>
           <ul class="product-info__list">
             <li class="product-info__item product-info__item--background-number-1">
@@ -123,9 +127,19 @@
               </div>
               <div class="results-image">
                 <div class="results-image__wrapper">
-                  <img class="results-image__before visually-hidden" src="../img/cat-fat.png" alt="Фотография кота до использования кэт энерджи" width="676" height="504">
-                  <img class="results-image__between" src="../img/Results-comprasion.png" alt="Фотография сравнения кота до использования и после использования корма кэт энерджи" width="690" height="656">
-                  <img class="results-image__after visually-hidden" src="../img/cat-skinny.png" alt="Фотография кота после использования кэт энерджи" width="539" height="515">
+                  <picture>
+                    <source media="(min-width: @tablet-width)" srcset="../img/cat-before-tablet-1x.png 1x, ../img/cat-before-tablet-2x.png 2x">
+                    <img class="results-image__before visually-hidden" src="../img/cat-before-mobile-1x.png" srcset="../img/cat-before-mobile-2x.png 2x" alt="Фотография кота до использования кэт энерджи">
+                  </picture>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png 1x, img/image_cat_tablet@2x.png 2x">
+                    <source media="(min-width: 1440px)" srcset="img/image_cat_desktop.png 1x, img/image_cat_desktop@2x.png 2x">
+                    <img class="results-image__between" src="img/image_cat_mobile.png" srcset="img/image_cat_mobile@2x.png 2x" alt="Фотография сравнения кота до использования и после использования корма кэт энерджи">
+                  </picture>
+                  <picture>
+                    <source media="(min-width: @tablet-width)" srcset="../img/cat-after-skinny-tablet-1x.png 1x, ../img/cat-after-skinny-tablet-1x.png 2x">
+                    <img class="results-image__after visually-hidden" src="../img/cat-after-skinny-mobile-1x.png" srcset="../img/cat-after-skinny-mobile-2x.png 2x" alt="Фотография кота после использования кэт энерджи">
+                  </picture>
                 </div>
                 <div class="results__range-control">
                   <div class="results__scale">
