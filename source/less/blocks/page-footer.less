@@ -25,14 +25,35 @@
   justify-content: space-between;
 }
 
-.page-footer__social__link path {
+.page-footer__social__icon {
+  &:hover,
+  &:focus {
+    fill: @electric-green;
+  }
+
+  &:active {
+    fill: @electric-green;
+    opacity: 0.6;
+  }
+}
+
+.icon__vk {
+  fill: #666;
+}
+
+.icon__instagram {
+  fill: #666;
+}
+
+.icon__facebook {
+  stroke: #666;
+
   &:hover,
   &:focus {
     stroke: @electric-green;
   }
 
   &:active {
-    fill: @electric-green;
     stroke: @electric-green;
     opacity: 0.6;
   }
@@ -49,7 +70,9 @@
   }
 }
 
-.page-footer__developer-link path {
+.page-footer__social__developer-icon {
+  fill: #666;
+
   &:hover,
   &:focus {
     fill: @electric-green;
