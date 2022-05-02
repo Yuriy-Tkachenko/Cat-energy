@@ -1,14 +1,12 @@
 .page-footer__wrapper {
-  width: 281px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 39px 0 22px 0;
+  padding-top: 30px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
     flex-direction: row;
   }
 
@@ -38,15 +36,15 @@
 }
 
 .icon__vk {
-  fill: #666;
+  fill: @dark-grey;
 }
 
 .icon__instagram {
-  fill: #666;
+  fill: @dark-grey;
 }
 
 .icon__facebook {
-  stroke: #666;
+  stroke: @dark-grey;
 
   &:hover,
   &:focus {
@@ -71,7 +69,7 @@
 }
 
 .page-footer__social__developer-icon {
-  fill: #666;
+  fill: @dark-grey;
 
   &:hover,
   &:focus {
@@ -80,6 +78,6 @@
 
   &:active {
     fill: @electric-green;
-    opacity: 0.46
+    opacity: 0.46;
   }
 }

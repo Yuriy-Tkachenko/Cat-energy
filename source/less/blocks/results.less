@@ -69,15 +69,14 @@
 .results__data-description {
   font-size: 14px;
   line-height: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   color: @dark-grey;
-  width: 280px;
+  min-width: 280px;
   margin: 0 0 43px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    width: 708px;
   }
 
   @media (min-width: @desktop-width) {
@@ -93,9 +92,12 @@
   display: flex;
   width: 279px;
   justify-content: space-between;
+  margin: 0 auto;
+
 
   @media (min-width: @tablet-width) {
     width: 366px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -201,18 +203,100 @@
 }
 
 .results-image {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
   @media (min-width: @tablet-width) {
     position: relative;
     z-index: 2;
   }
 }
 
+.results-image__wrapper {
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
+}
+
 .results-image__between {
   @media (min-width: @tablet-width) {
-    margin-top: -160px;
+    margin: -160px auto 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin: -185px 0 0 0;
+    margin-top: -200px;
+  }
+}
+
+.results__range-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 228px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 580px;
+    margin: -80px auto 50px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -140px;
+  }
+}
+
+.results__range-control__description {
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.results__scale {
+  width: 88px;
+  height: 14px;
+  background-color: @basic-white;
+  border: 1px solid @extra-grey;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 430px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: @extra-grey;
+  }
+}
+
+.results__bar {
+  height: 6px;
+  background-color: @electric-green;
+  border-radius: 15px;
+  margin-left: 5px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.results__toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 12px solid @basic-white;
+    background-color: @electric-green;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 @extra-grey;
+    cursor: pointer;
   }
 }

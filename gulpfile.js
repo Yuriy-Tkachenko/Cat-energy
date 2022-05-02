@@ -92,7 +92,6 @@ exports.sprite = sprite;
 const scripts = () => {
   return gulp.src("source/js/main-navigation.js")
     .pipe(terser())
-    .pipe(rename("main-navigation.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }

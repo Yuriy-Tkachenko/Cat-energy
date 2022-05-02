@@ -1,7 +1,7 @@
 .page {
   width: 100%;
   height: 100%;
-  font-family: "oswaldregular";
+  font-family: "oswaldregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -12,16 +12,22 @@
 }
 
 .page-body__main-screen {
-  @media (min-width: @desktop-width) {
-    background-image: url(../img/main-desktop-background.png);
-    background-size: 882px 694px;
-    background-repeat: no-repeat;
-    background-position: top right;
+  position: relative;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url(../img/main-desktop-background@2x.png);
-      background-size: 882px 694px;
-      background-repeat: no-repeat;
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      min-height: 694px;
+      top: 0;
+      right: 0;
+      background-image: url("/img/main-desktop-background.jpg");
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/main-desktop-background@2x.jpg");
+      }
     }
   }
 }

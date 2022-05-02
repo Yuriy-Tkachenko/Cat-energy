@@ -1,11 +1,12 @@
 .features__list {
-  min-height: 580px;
+  min-height: 552px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     min-height: 775px;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,10 +20,12 @@
 
 .features__item {
   background-color: @basic-grey;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     max-width: 708px;
     min-height: 372px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -85,7 +88,7 @@
 
 .features__title--cat-fat-logo {
   &::before {
-    background-image: url(../img/cat_slim.svg);
+    background-image: url("/img/cat_slim.svg");
     width: 50px;
     height: 53px;
   }
@@ -93,7 +96,7 @@
 
 .features__title--cat-skinny-logo {
   &::before {
-    background-image: url(../img/cat_fat.svg);
+    background-image: url("/img/cat_fat.svg");
     width: 67px;
     height: 50px;
   }
@@ -102,10 +105,12 @@
 .features__description {
   font-size: 14px;
   line-height: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   color: @dark-grey;
-  width: 227px;
-  margin-bottom: 56px;
+  min-width: 227px;
+  margin-bottom: 15px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid @special-grey;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -122,6 +127,11 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    border: none;
+    width: 377px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 390px;
     margin: 0 0 23px 0;
@@ -130,7 +140,7 @@
 
 .features__description--cat-fat-logo {
   &::before {
-    background-image: url(../img/cat_slim.svg);
+    background-image: url("/img/cat_slim.svg");
     width: 200px;
     height: 211px;
     top: -60px;
@@ -149,7 +159,7 @@
 
 .features__description--cat-skinny-logo {
   &::before {
-    background-image: url(../img/cat_fat.svg);
+    background-image: url("/img/cat_fat.svg");
     width: 268px;
     height: 200px;
     top: -62px;
@@ -171,9 +181,8 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @basic-black;
-  width: 240px;
+  min-width: 240px;
   padding: 17px 154px 0 0;
-  border-top: 1px solid @special-grey;
   position: relative;
 
   &::after {
@@ -181,7 +190,7 @@
     width: 24px;
     height: 12px;
     position: absolute;
-    background-image: url(../img/arrow-link.svg);
+    background-image: url("/img/arrow-link.svg");
     top: 27px;
     left: 135px;
   }

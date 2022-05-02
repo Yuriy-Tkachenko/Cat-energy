@@ -150,7 +150,7 @@
 }
 
 .search-form__input {
-  font-family: "oswaldregular";
+  font-family: "oswaldregular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   margin-left: 13px;
@@ -209,13 +209,6 @@
   }
 }
 
-.search-form__label-radio--active {
-  &:hover,
-  &:focus {
-
-  }
-}
-
 .search-form__subject-list {
   min-height: 115px;
   margin: 0;
@@ -251,7 +244,7 @@
   padding: 9px 10px 0 10px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;;
+    margin-bottom: 65px;
   }
 }
 
@@ -293,10 +286,9 @@
 
 .search-form__option-list {
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   margin: 0 0 34px 0;
 
   @media (min-width: @tablet-width) {
@@ -310,7 +302,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     margin: 0 0 61px 0;
+    gap: 105px;
   }
+}
+
+.search-form__option-item {
+  min-width: 175px;
 }
 
 .search-form__option-point {
@@ -340,7 +337,7 @@
   position: absolute;
   width: 18px;
   height: 14px;
-  background-image: url(../img/check-mark.svg);
+  background-image: url("/img/check-mark.svg");
   left: 8px;
   top: 5px;
 
@@ -355,9 +352,10 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    min-width: 565px;
+    width: 565px;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 72px;
   }
 
@@ -367,7 +365,7 @@
 }
 
 .search-form__button-position {
-  margin: 0 63px 21px 0;
+  margin: 0 0 21px 0;
   min-width: 282px;
 }
 
