@@ -1,0 +1,138 @@
+.product-info {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @light-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
+}
+
+.product-info__title {
+  color: @basic-black;
+  padding: 0;
+  margin: 27px 0 38px 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.product-info__list {
+  display: grid;
+  min-height: 300px;
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 37px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 94px;
+    margin-bottom: 70px;
+  }
+}
+
+.product-info__item {
+  @media (min-width: @tablet-width) {
+    min-width: 230px;
+    min-height: 280px;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: top right;
+  }
+}
+
+.product-info__item--background-number-1 {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-number-1.png");
+  }
+}
+
+.product-info__item--background-number-2 {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-number-2.png");
+  }
+}
+
+.product-info__item--background-number-3 {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-number-3.png");
+  }
+}
+
+.product-info__item--background-number-4 {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-number-4.png");
+  }
+}
+
+.product-info__description {
+  color: @dark-grey;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  padding-left: 80px;
+  margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 163px;
+    padding: 111px 0 44px 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
+  }
+}
+
+.product-info__description--nature-logo {
+  &::before {
+    background-image: url("../img/icon-nature.svg");
+  }
+}
+
+.product-info__description--cook-logo {
+  &::before {
+    background-image: url("../img/icon-cook.svg");
+  }
+}
+
+.product-info__description--fork-logo {
+  &::before {
+    background-image: url("../img/icon-fork.svg");
+  }
+}
+
+.product-info__description--watch-logo {
+  &::before {
+    background-image: url("../img/icon-timer.svg");
+  }
+}
